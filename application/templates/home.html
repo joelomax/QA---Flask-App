@@ -1,7 +1,7 @@
 <!-- this is a very simple html file to demonstrate the template functionality -->
-{% extends layout.html %}
+{% extends "layout.html" %}
 {% block body_content %}
-    <a href="{{ url_for('about') }}">About Page</a>
+    <a href="{{ url_for('home') }}">Home Page</a>
 
     {% for post in posts %}
         <div>
