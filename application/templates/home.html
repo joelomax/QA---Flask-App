@@ -1,15 +1,12 @@
-<!-- this is a very simple html file to demonstrate the template functionality -->
 {% extends "layout.html" %}
 {% block body_content %}
-    <a href="{{ url_for('home') }}">Home Page</a>
-
-    {% for post in posts %}
+    <h1>Home Page</h1>
+    <p>Welcome to this web app!</p>
         <div>
             <h3>{{ post.title }}</h3>
-            <p><b> - First name:</b>{{ post.name.first }}</p>
-            <p><b> - Last name:</b>{{ post.name.last }}</p>
-            <p> -- {{ post.content }}</p>
         </div>
-    {% endfor %}
-{% endblock %}
- 
+	<div>
+	    <p>{{ post.first_name }}</p>
+	    <p>{{ post.last_name }}</p>
+	    <p>{{ post.content }}</p>
+{% endblock body_content %} 
