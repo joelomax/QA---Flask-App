@@ -46,3 +46,13 @@ def post():
         print(form.errors)
 
     return render_template('post.html', title='Post', form=form)
+
+@app.route('/')
+@app.route('/about')
+def about():
+    return render_template('about.html', title='About')
+
+@app.route('/')
+@app.route('/register')
+def register():
+    return render_template('register.html', title='Register')
