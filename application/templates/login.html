@@ -1,7 +1,7 @@
-{% extends 'layout.html' %}
-{% block body_content %}
-    <h1>Register Page</h1>
-    <p>Need an account? Sign up</p>
+<!DOCTYPE html> 
+
+    <h1>Login Page</h1>
+    <p>Login</p>
     <div class='form'>
         <form method='POST' action=''>
             {{ form.hidden_tag() }}
@@ -18,24 +18,15 @@
             </div>
             <br>
             <div class='form_group'>
-		    {{form.password.label}}
-		    {{form.password}}
-		    <div class='error'>
-                        {% for error in form.email.errors %}
-                            <span>{{ error }}</span>
-                        {% endfor %}
-		    </div>
-	    </div>
-            <br>
-	    <div class='form_group'>
-		    {{ form.confirm_password.label }}
-		    {{ form.confirm_password }}
-		    <div class='error'>
+                    {{form.password.label}}
+                    {{form.password}}
+                    <div class='error'>
                         {% for error in form.email.errors %}
                             <span>{{ error }}</span>
                         {% endfor %}
                     </div>
-	    </div>
+            </div>
+            <br>
             <div class='form_group'>
                 {{ form.submit }}
             </div>

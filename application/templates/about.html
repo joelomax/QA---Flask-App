@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<% block body_content %}{% endblock %}
+{% extends 'layout.html' %}
+{% block body_content %}{% endblock %}
 <h1>{{ about }}</h1>
 
 <div><a href="{{ url_for('post') }}">Post</a></div>
